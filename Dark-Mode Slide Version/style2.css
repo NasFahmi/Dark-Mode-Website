@@ -1,0 +1,80 @@
+/* import font  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap');
+
+/* root */
+:root{
+    --background-color : #fff;
+    --text-color:#222;
+    --dark-backgound-color:#121212;
+    --dark-text-color: #eee;
+    --body-font : 'Poppins','Roboto',sans-serif;
+    --btn-color : rgb(116, 236, 105);
+}
+/* reusable css */
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+    background-color: var(--background-color);
+    transition: .3s background-color;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+/* wrapper */
+.wrapper{
+    padding: 1.5rem 2rem .75rem 2rem;
+}
+.container{
+    margin: auto;
+    max-width: 662px;
+}
+.toggle-btn{
+    width: 60px;
+    height:25px;
+    border-radius: .75rem;
+    display: grid;
+    align-items: center;
+    position: relative;
+    background-color: var(--dark-backgound-color);
+    cursor: pointer;
+    box-shadow: 1px 2px 3px var(--text-color);
+    border: none;
+    transition: .3s background-color;
+    margin-top: 5rem;
+}
+.btn{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    left: 2.5px;
+    position: absolute;
+    background-color: var(--dark-text-color);
+    transition: .3s;
+}
+.btn-active{
+    transform: translateX(35px);
+}
+/* dark theme */
+body.dark{
+    background-color: var(--dark-backgound-color);
+    color: var(--dark-text-color);
+}
+body.dark .btn{
+    background-color: var(--text-color);
+}
+body.dark .toggle-btn{
+    background-color: var(--dark-text-color);
+}
+/* for set transition to all word */
+h1,h2,h3,h4,h5,h6,p{
+    transition: .3s color;
+}
